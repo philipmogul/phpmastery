@@ -1,7 +1,8 @@
 <?php 
-// make sure everything is added to repo
 
+// make sure everything is added to repository 
 
 // deleting method 1 is just normal selecting a file and deleting it 
 
-
+// delete 2 is using code 
+git rm file_deleted_2.txt 

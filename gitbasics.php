@@ -26,6 +26,16 @@ echo "git commit -m 'Messages attached to commit' => This is used to do the fina
 
 
 
-// git diff is used to see what changes have been done to a file 
-echo "git diff: see what changes have been done to a file: compares respository, staging and working directory. <br/><br/>";
+// git diff is used to see what changes have been done to a file in working directory 
+echo "git diff: see what changes have been done to a file: working directory. <br/><br/>";
+
+
+// git diff --staged : used to see changes to files in the staged directory 
+echo "git diff --staged <br /><br />";
+
+
+// deleting files in git 
+// make sure all files are added to repository 
+echo "git rm filename <br /><br />";
+
 
