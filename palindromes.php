@@ -1,0 +1,5 @@
+<?php 
+// Palindromes
+// strrev & iterations 
+
+

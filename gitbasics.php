@@ -39,3 +39,15 @@ echo "git diff --staged <br /><br />";
 echo "git rm filename <br /><br />";
 
 
+
+// moving and rename files 
+// do a git add first, the git rm , then add to status and git will compare the data and find them equal 
+// and realize the files were renamed 
+// or better way 
+// use mv command = git mv file_deleted_1.txt file_renamed_1.txt 
+echo "git mv file_deleted_1.txt file_renamed_1.txt <br /><br />";
+
+
+
+
+
