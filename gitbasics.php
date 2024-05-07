@@ -21,4 +21,11 @@ echo "git add . : is used to add files <br/><br/>";
 
 
 // commit changes = git commit -m "Message attached to this commit"
-echo "git commit -m 'Messages attached to commit' => This is used to do the final commit. ";
+echo "git commit -m 'Messages attached to commit' => This is used to do the final commit. <br/><br/>";
+
+
+
+
+// git diff is used to see what changes have been done to a file 
+echo "git diff: see what changes have been done to a file: compares respository, staging and working directory. <br/><br/>";
+

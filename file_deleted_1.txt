@@ -1,0 +1,7 @@
+<?php 
+// make sure everything is added to repo
+
+
+// deleting method 1 is just normal selecting a file and deleting it 
+
+
