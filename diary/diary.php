@@ -6,11 +6,26 @@
 if( file_exists("diary.txt"))
 {
 	$handle = fopen("diary.txt", 'r');
+<<<<<<< HEAD
 	$data = nl2br(fread($handle,filesize("diary.txt")));
+=======
+	$data = nl2br(fread($handle,filesize($file)));
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 	fclose($handle);
 }
 else {$data = "Enter thoughts for the day";}
 
+<<<<<<< HEAD
+=======
+
+// create file once posted and update records
+if( isset($_POST['submit']) )
+{
+	
+	
+}
+
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +41,14 @@ else {$data = "Enter thoughts for the day";}
 		<div class="row">
 			<div class="col-md-8 float-left">
 				<h3>Welcome to your diary</h3><hr />
+<<<<<<< HEAD
 				<p class="form-control btn btn-primary">Submit new entry.</p>
 				<form class="form-control" method="post" id="form">
 				<input type="text" rows="3" scrollable id="day" class="form-control" placeholder="Date of today = D/M/Y" name="">
+=======
+				<form class="form-control" method="post">
+				<input type="text" rows="3" id="day" class="form-control" placeholder="Date of today = D/M/Y" name="">
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 				<br />
 				<textarea id="txt" rows="7" placeholder="<?php echo $data; ?>" class="form-control"></textarea> <br />
 				<br />
@@ -62,7 +82,11 @@ else {$data = "Enter thoughts for the day";}
 	<script type="text/javascript">
 		$("document").ready(function(data)
 		{
+<<<<<<< HEAD
 			$("#form").on("submit",function()
+=======
+			$("#btnD").on("click",function()
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 			{
 				var day = $("#day").val();
 				var txt = $("#txt").val();
@@ -71,11 +95,15 @@ else {$data = "Enter thoughts for the day";}
 				if( day !== '' && txt !== '' )
 				{
 					rez.html('Processing ...');
+<<<<<<< HEAD
 					$.post("diary2.php",{'day': day,'txt' : txt},function(data)
 						{
 							rez.html(data);
 						});
 					return false;
+=======
+
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 				}
 				else
 				{

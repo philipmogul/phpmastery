@@ -9,6 +9,7 @@ if( isset($_POST['day']) && isset($_POST['txt']) )
 
 	if( preg_match("/^[\d\/\-]{6,}+$/", $day) )
 	{
+<<<<<<< HEAD
 		if( preg_match("/^[a-zA-Z\d\s\.\w\?\!\n\r\,]{30,}+$/",$txt) )
 		{
 			if( $handle = fopen('diary.txt', 'w') )
@@ -25,6 +26,15 @@ if( isset($_POST['day']) && isset($_POST['txt']) )
 		else
 		{
 			echo "Ensure to type only letters or digits or spaces or / or ? or ! or periods and thoughts is atleast 30 characters long.";
+=======
+		if( preg_match("/^[]{30,}+$/",$txt) )
+		{
+			echo "Create file...";
+		}
+		else
+		{
+			echo "Ensure to type only letters or digits or / or ? or ! or periods and thoughts is atleast 30 characters long.";
+>>>>>>> 89c1c329ead8a30042ab603f8c5d41e41ed1e953
 		}
 	}
 	else
