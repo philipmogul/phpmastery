@@ -6,18 +6,10 @@
 if( file_exists("diary.txt"))
 {
 	$handle = fopen("diary.txt", 'r');
-	$data = nl2br(fread($handle,filesize($file)));
+	$data = nl2br(fread($handle,filesize("diary.txt")));
 	fclose($handle);
 }
 else {$data = "Enter thoughts for the day";}
-
-
-// create file once posted and update records
-if( isset($_POST['submit']) )
-{
-	
-	
-}
 
 ?>
 
@@ -34,8 +26,9 @@ if( isset($_POST['submit']) )
 		<div class="row">
 			<div class="col-md-8 float-left">
 				<h3>Welcome to your diary</h3><hr />
-				<form class="form-control" method="post">
-				<input type="text" rows="3" id="day" class="form-control" placeholder="Date of today = D/M/Y" name="">
+				<p class="form-control btn btn-primary">Submit new entry.</p>
+				<form class="form-control" method="post" id="form">
+				<input type="text" rows="3" scrollable id="day" class="form-control" placeholder="Date of today = D/M/Y" name="">
 				<br />
 				<textarea id="txt" rows="7" placeholder="<?php echo $data; ?>" class="form-control"></textarea> <br />
 				<br />
@@ -69,7 +62,7 @@ if( isset($_POST['submit']) )
 	<script type="text/javascript">
 		$("document").ready(function(data)
 		{
-			$("#btnD").on("click",function()
+			$("#form").on("submit",function()
 			{
 				var day = $("#day").val();
 				var txt = $("#txt").val();
@@ -78,7 +71,11 @@ if( isset($_POST['submit']) )
 				if( day !== '' && txt !== '' )
 				{
 					rez.html('Processing ...');
-
+					$.post("diary2.php",{'day': day,'txt' : txt},function(data)
+						{
+							rez.html(data);
+						});
+					return false;
 				}
 				else
 				{
