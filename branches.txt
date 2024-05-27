@@ -1,0 +1,7 @@
+
+Working with branches in github 
+Use git checkout 'branchname' to switch between branches
+eg git checkout newbranch 
+It will switch from master to that branch 
+To go back to master, type: 
+git checkout master 
